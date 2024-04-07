@@ -9,7 +9,7 @@ The fully functioning REST API using:
 ## Getting started
 
 To start project, run:
-
+- Place youe MONGODB_URI in a `.env` file
 ```
 npm install
 npm start
