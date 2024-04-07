@@ -6,11 +6,12 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+const corsOptions = {
+  origin: "*",
+  methods: "GET,POST",
+  allowedHeaders: "Content-Type,Authorization",
+};
+app.use(cors(corsOptions));
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI, {
